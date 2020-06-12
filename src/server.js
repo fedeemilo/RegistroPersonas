@@ -23,11 +23,10 @@ app.use(
 	myConnection(
 		mysql,
 		{
-			host: 'localhost',
-			user: 'root',
-			password: 'Gracias2020!',
-			port: '3306',
-			database: 'registro_personas_db',
+			host: 'us-cdbr-east-05.cleardb.net',
+			user: 'b89274a0bb3700',
+			password: '7b47ad49',
+			database: 'heroku_5e5e3062356911b',
 		},
 		'single'
 	)
