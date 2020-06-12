@@ -1,10 +1,10 @@
-require('dotenv').config()
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
-const dbConfig = require("../src/config/db.config.js");
+const dbConfig = require('../src/config/db.config.js');
 var methodOverride = require('method-override');
 const myConnection = require('express-myconnection');
 
@@ -28,7 +28,7 @@ app.use(
 			host: dbConfig.HOST,
 			user: dbConfig.USER,
 			password: dbConfig.PASSWORD,
-			database: dbConfig.DB
+			database: dbConfig.DB,
 		},
 		'single'
 	)
