@@ -1,0 +1,68 @@
+ <%- include ('partials/_header')  %>
+
+
+<div class="container mt-5">
+
+    <div class="row">
+
+        <div class="col-md-6 mx-auto">
+        
+            <div class="card text-white bg-dark rounded">
+                <div class="card-body">
+                
+                    <form action="/update/<%= data.id %>?_method=PUT" method="POST">
+                    
+                        <div class="row ">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="name">Nombre</label>
+                                        <input type="text" class="form-control" name="name" value="<%= data.name %>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastname">Apellido</label>
+                                        <input type="text" class="form-control" name="lastname" value="<%= data.name %><%= data.lastname %>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dni">Nro. Documento</label>
+                                        <input type="number" class="form-control" name="dni" maxlength="8" value="<%= data.name %><%= data.dni %>">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="address">Dirección/Domicilio</label>
+                                        <input type="text" class="form-control" name="address" value="<%= data.address %>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Teléfono/Celular</label>
+                                        <input type="text" class="form-control" name="phone" value="<%= data.phone %>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" name="email" aria-describedby="emailHelp" value="<%= data.email %>">
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label for="text">Texto</label>
+                                <textarea class="form-control" name="text" rows="5" value="<%= data.text %>"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-secondary">Editar Persona</button>
+                    
+                    </form>
+                </div>
+            </div>    
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<%- include ('partials/_footer')  %>

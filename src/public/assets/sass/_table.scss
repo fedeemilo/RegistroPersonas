@@ -1,0 +1,32 @@
+/* Table with persons results */
+
+.action {
+	text-decoration: none;
+}
+
+.action:hover {
+	text-decoration: none;
+}
+
+/* action buttons */
+
+.delete {
+	color: rgb(212, 56, 28);
+}
+
+.edit {
+	color: #dde324;
+}
+
+/* toggle show/hide of table with persons results */
+
+.d-table-if {
+	opacity: 0;
+	transition: opacity 500ms ease-in-out;
+}
+
+/* toggle show/hide of form of persons register */
+
+.d-form-if {
+    display: none;
+}

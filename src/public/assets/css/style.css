@@ -1,0 +1,53 @@
+/* colors */
+/* font sizes */
+body {
+  background: #b4bdac;
+}
+
+button {
+  -webkit-transition: 500ms !important;
+  transition: 500ms !important;
+}
+
+/* Header navbar */
+ion-icon {
+  font-size: 30px;
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+}
+
+/* Form for register persons */
+.formulario-personas .form-group label {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Table with persons results */
+.action {
+  text-decoration: none;
+}
+
+.action:hover {
+  text-decoration: none;
+}
+
+/* action buttons */
+.delete {
+  color: #d4381c;
+}
+
+.edit {
+  color: #dde324;
+}
+
+/* toggle show/hide of table with persons results */
+.d-table-if {
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+}
+
+/* toggle show/hide of form of persons register */
+.d-form-if {
+  display: none;
+}
