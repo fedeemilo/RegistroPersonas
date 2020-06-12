@@ -14,7 +14,7 @@ const app = express();
 const personRoutes = require('./routes/person');
 
 // settings
-const PORT = process.env.PORT || 4000;
+app.set('port', process.env.PORT || 4000);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -47,6 +47,6 @@ app.use('/', personRoutes);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // starting the server
-app.listen(PORT, () => {
+app.listen(app.get('port'), () => {
 	console.log('Server corriendo en el puerto 4000');
 });
