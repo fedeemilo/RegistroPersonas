@@ -8,7 +8,6 @@ const dbConfig = require("../src/config/db.config.js");
 var methodOverride = require('method-override');
 const myConnection = require('express-myconnection');
 
-
 const app = express();
 
 // importing routes
