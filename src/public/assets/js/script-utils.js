@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		// Change table button's text
 		console.log(showTableButton.innerHTML.trim());
-		showTableButton.innerHTML.trim() === 'Ocultar Tabla de Personas'
-			? (showTableButton.innerHTML = 'Mostrar Tabla de Personas')
-			: (showTableButton.innerHTML = 'Ocultar Tabla de Peronas');
+		showTableButton.innerHTML.trim() === 'Ocultar Tabla'
+			? (showTableButton.innerHTML = 'Mostrar Tabla')
+			: (showTableButton.innerHTML = 'Ocultar Taba');
 	});
 
 	/* On click toggle show/hide form */
@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		cardPersonsForm.classList.toggle('d-form-if');
 
 		// Change form button's text
-		showFormButton.innerHTML.trim() === 'Ocultar Formulario de Registro'
-			? (showFormButton.innerHTML = 'Mostrar Formulario de Registro')
-			: (showFormButton.innerHTML = 'Ocultar Formulario de Registro');
+		showFormButton.innerHTML.trim() === 'Ocultar Formulario'
+			? (showFormButton.innerHTML = 'Mostrar Formulario')
+			: (showFormButton.innerHTML = 'Ocultar Formulario');
 	});
 });
