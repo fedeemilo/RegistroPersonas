@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
@@ -30,7 +29,8 @@ app.use(
 			password: dbConfig.PASSWORD,
 			database: dbConfig.DB,
 			port: 3306,
-		}
+		},
+		'single'
 	)
 );
 
