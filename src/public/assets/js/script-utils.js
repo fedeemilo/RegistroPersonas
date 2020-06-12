@@ -8,7 +8,6 @@ const personsTable = document.querySelector('#table-persons');
 const cardPersonsForm = document.querySelector('#card-persons-form');
 
 document.addEventListener('DOMContentLoaded', () => {
-
 	/* On click toggle show/hide table  */
 	showTableButton.addEventListener('click', () => {
 		// Toggle show/hide table
@@ -30,6 +29,5 @@ document.addEventListener('DOMContentLoaded', () => {
 		showFormButton.innerHTML.trim() === 'Ocultar Formulario de Registro'
 			? (showFormButton.innerHTML = 'Mostrar Formulario de Registro')
 			: (showFormButton.innerHTML = 'Ocultar Formulario de Registro');
-    });
-    
+	});
 });

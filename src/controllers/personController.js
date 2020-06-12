@@ -102,7 +102,6 @@ controller.delete = (req, res) => {
 
 			res.redirect('/');
 		});
-		s;
 	});
 };
 

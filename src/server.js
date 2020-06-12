@@ -1,10 +1,13 @@
+require('dotenv').config()
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
+const dbConfig = require("../src/config/db.config.js");
 var methodOverride = require('method-override');
 const myConnection = require('express-myconnection');
+
 
 const app = express();
 
@@ -23,10 +26,10 @@ app.use(
 	myConnection(
 		mysql,
 		{
-			host: 'us-cdbr-east-05.cleardb.net',
-			user: 'b89274a0bb3700',
-			password: '7b47ad49',
-			database: 'heroku_5e5e3062356911b',
+			host: dbConfig.HOST,
+			user: dbConfig.USER,
+			password: dbConfig.PASSWORD,
+			database: dbConfig.DB
 		},
 		'single'
 	)
