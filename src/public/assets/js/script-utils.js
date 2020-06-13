@@ -4,12 +4,13 @@
 
 const showTableButton = document.querySelector('#show-table');
 const showFormButton = document.querySelector('#show-form');
-const closeAlertButton = document.querySelector('.close');
+const closeAlertButton = document.querySelectorAll('.close');
 const personsTable = document.querySelector('#table-persons');
 const cardPersonsForm = document.querySelector('#card-persons-form');
-const alertDiv = document.querySelector('.alert-dismissible');
+const alertDiv = document.querySelectorAll('.alert-dismissible');
 
 document.addEventListener('DOMContentLoaded', () => {
+	
 	/* On click toggle show/hide table  */
 	showTableButton.addEventListener('click', () => {
 		// Toggle show/hide table
@@ -34,8 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	/* Close alert */
-	closeAlertButton.addEventListener('click', () => {
+	closeAlertButton.forEach(() => {
+		console.log(this);
+		this.addEventListener('click', (e) => {
+			alertDiv[e.target.parentElement.dataset.num].style.display = 'none';
+		});
+	})
 
-		alertDiv.style.display = 'none';
-	});
 });
