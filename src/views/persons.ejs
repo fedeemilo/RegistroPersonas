@@ -41,21 +41,21 @@
                                 <label for="text">Texto</label>
                                 <textarea class="form-control input-text" name="text" rows="5"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-secondary">Registrar Persona</button>
+                            <button type="submit" class="btn btn-secondary w-100">Registrar Persona</button>
                         </form>
                     </div>
                 </div>
             </div>
             <div class="col-12">
-                <button type="button" id="show-table" class="btn btn-outline-primary w-100">
+                <button type="button" id="show-table" class="btn btn-outline-primary h1 w-100">
                     Ocultar Tabla
                 </button>
-                 <button type="button" id="show-form" class="btn btn-outline-primary  w-100">
+                 <button type="button" id="show-form" class="btn btn-outline-primary h1  w-100">
                     Ocultar Formulario
                 </button>     
             </div>
             <div class="col-12 text-center mb-3 mt-3">
-                <table id="table-persons" class="table-sm table-responsive table-bordered table-hover table-dark mx-auto">
+                <table id="table-persons" class="table-sm table-responsive-lg table-bordered table-hover table-dark mx-auto">
                     <thead>
                     <tr>
                         <th>N°</th>
@@ -66,6 +66,7 @@
                         <th>Teléfono/Celular</th>
                         <th>Email</th>
                         <th>Texto</th>
+                        <th>Código QR</th>
                         <th>Acciones</th>
                     </tr>
                     </thead>
@@ -80,7 +81,8 @@
                                     <td><%= data[i].address %></td>
                                     <td><%= data[i].phone %></td>
                                     <td><%= data[i].email %></td>
-                                    <td><%= data[i].text.substring(0,10) %>...</td>   
+                                    <td><%= data[i].text.substring(0,10) %>...</td>
+                                    <td><a href=""><img src="<%= data[i].qr_code %>" alt="qrCode" /></a></td>
                                     <td>
                                         <a class="action" href="/edit/<%= data[i].id %>">
                                             <ion-icon  size="small" class="edit" name="pencil-outline"></ion-icon>

@@ -1,3 +1,9 @@
+const QRCode = require('qrcode');
+
+QRCode.toString('36374260', function (err, url) {
+	console.log(url);
+});
+
 const controller = {};
 
 controller.list = (req, res) => {
@@ -17,8 +23,10 @@ controller.list = (req, res) => {
 	});
 };
 
-controller.save = (req, res) => {
+controller.save = async (req, res) => {
 	const data = req.body;
+
+	const QR = await (await QRCode.toDataURL(data.dni.toString()));
 
 	let person = {
 		name: data.name,
@@ -28,6 +36,7 @@ controller.save = (req, res) => {
 		phone: data.phone,
 		email: data.email,
 		text: data.text,
+		qr_code: QR,
 	};
 
 	req.getConnection((err, conn) => {
@@ -68,6 +77,7 @@ controller.update = (req, res) => {
 		phone: data.phone,
 		email: data.email,
 		text: data.text,
+		qr_code: data.qr_code,
 	};
 
 	req.getConnection((err, conn) => {

@@ -1,12 +1,12 @@
 /* colors */
 /* font sizes */
 body {
-  background: #b4bdac;
+  background: #9A9DA0;
 }
 
 button {
-  -webkit-transition: 500ms !important;
-  transition: 500ms !important;
+  -webkit-transition: 700ms !important;
+  transition: 700ms !important;
 }
 
 /* Header navbar */
