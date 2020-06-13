@@ -1,9 +1,29 @@
+html, body {
+	height: 100%;
+}
+
 body {
 	background: $primary-color;
+	display: flex;
+  	flex-direction: column;
 }
 
 button {
 	transition: 700ms !important;
 }
 
+.footer {
+	padding: 1rem;
+	height: 5rem;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
 
+a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}

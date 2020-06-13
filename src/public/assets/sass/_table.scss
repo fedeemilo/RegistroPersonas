@@ -17,16 +17,3 @@
 .edit {
 	color: #dde324;
 }
-
-/* toggle show/hide of table with persons results */
-
-.d-table-if {
-	opacity: 0;
-	transition: opacity 500ms ease-in-out;
-}
-
-/* toggle show/hide of form of persons register */
-
-.d-form-if {
-    display: none;
-}

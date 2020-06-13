@@ -1,6 +1,6 @@
  <%- include ('partials/_header')  %>
 
-    <div class="container mt-4 formulario-personas">
+    <div class="container-fluid mt-4 formulario-personas">
         <div class="row">        
             <div class="col-12 col-lg-12">
                 <div id="card-persons-form" class="card text-white bg-dark mb-3 rounded">
@@ -96,6 +96,11 @@
                         <% } %>
                     </tbody>
                 </table>
+                <div class="alert alert-dismissible alert-primary mt-2">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <h4 class="alert-heading">Atención!</h4>
+                    <p class="mb-0">Para ver el código QR de cada persona en un formato más grande, haga click en la imágen en miniatura de la tabla.</p>
+                </div>
             </div>
         </div>
     </div>
