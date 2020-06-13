@@ -14,10 +14,16 @@ button {
 
 .footer {
 	padding: 1rem;
-	height: 5rem;
+	height: 20rem;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
+
+	.p-footer {
+
+		display: flex;
+
+	}
 }
 
 a {
