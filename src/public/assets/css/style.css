@@ -45,6 +45,12 @@ a:hover {
   text-decoration: none;
 }
 
+@media (max-width: 992px) {
+  .footer {
+    height: 14.5rem;
+  }
+}
+
 /* Header navbar */
 ion-icon {
   font-size: 30px;
