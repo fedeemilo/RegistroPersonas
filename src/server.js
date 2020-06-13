@@ -24,15 +24,16 @@ app.use(
 	myConnection(
 		mysql,
 		{
-			host: dbConfig.HOST,
-			user: dbConfig.USER,
-			password: dbConfig.PASSWORD,
-			database: dbConfig.DB,
+			host: process.env.DB_HOST,
+			user: process.env.DB_USER,
+			password: process.env.DB_PASSWORD,
+			database: process.env.DB_DATABASE,
 			port: 3306,
 		},
 		'single'
 	)
 );
+console.log(process.env.DB_DATABASE)
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
