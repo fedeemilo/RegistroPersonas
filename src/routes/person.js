@@ -17,4 +17,7 @@ router.put('/update/:id', controller.update);
 // delete person from database
 router.get('/delete/:id', controller.delete);
 
+// get the person qr code
+router.get('/qrcode/:id', controller.getQR)
+
 module.exports = router;

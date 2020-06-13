@@ -55,7 +55,7 @@
                 </button>     
             </div>
             <div class="col-12 text-center mb-3 mt-3">
-                <table id="table-persons" class="table-sm table-responsive-lg table-bordered table-hover table-dark mx-auto">
+                <table id="table-persons" class="table-sm table-responsive table-bordered table-hover table-dark mx-auto">
                     <thead>
                     <tr>
                         <th>N°</th>
@@ -82,7 +82,7 @@
                                     <td><%= data[i].phone %></td>
                                     <td><%= data[i].email %></td>
                                     <td><%= data[i].text.substring(0,10) %>...</td>
-                                    <td><a href=""><img src="<%= data[i].qr_code %>" alt="qrCode" /></a></td>
+                                    <td><a href="/qrcode/<%= data[i].id %>" target="_blank"><img src="<%= data[i].qr_code %>" alt="qrCode" class="w-50" /></a></td>
                                     <td>
                                         <a class="action" href="/edit/<%= data[i].id %>">
                                             <ion-icon  size="small" class="edit" name="pencil-outline"></ion-icon>

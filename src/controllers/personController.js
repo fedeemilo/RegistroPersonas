@@ -115,4 +115,17 @@ controller.delete = (req, res) => {
 	});
 };
 
+controller.getQR = (req, res) => {
+
+	let id = req.params.id;
+
+	req.getConnection((err, conn) => {
+		conn.query('SELECT * FROM person WHERE id = ?', [id], (err, personDB) => {
+			res.render('person_qrcode', {
+				data: personDB[0]
+			})
+		})
+	})
+}
+
 module.exports = controller;
