@@ -33,7 +33,7 @@ app.use(
 		'single'
 	)
 );
-console.log(process.env.DB_DATABASE)
+
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
