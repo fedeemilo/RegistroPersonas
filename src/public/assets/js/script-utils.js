@@ -10,14 +10,12 @@ const cardPersonsForm = document.querySelector('#card-persons-form');
 const alertDiv = document.querySelectorAll('.alert-dismissible');
 
 document.addEventListener('DOMContentLoaded', () => {
-	
 	/* On click toggle show/hide table  */
 	showTableButton.addEventListener('click', () => {
 		// Toggle show/hide table
 		personsTable.classList.toggle('d-none');
 
 		// Change table button's text
-		console.log(showTableButton.innerHTML.trim());
 		showTableButton.innerHTML.trim() === 'Ocultar Tabla'
 			? (showTableButton.innerHTML = 'Mostrar Tabla')
 			: (showTableButton.innerHTML = 'Ocultar Tabla');
@@ -33,13 +31,5 @@ document.addEventListener('DOMContentLoaded', () => {
 			? (showFormButton.innerHTML = 'Mostrar Formulario')
 			: (showFormButton.innerHTML = 'Ocultar Formulario');
 	});
-
-	/* Close alert */
-	closeAlertButton.forEach(() => {
-		console.log(this);
-		this.addEventListener('click', (e) => {
-			alertDiv[e.target.parentElement.dataset.num].style.display = 'none';
-		});
-	})
 
 });

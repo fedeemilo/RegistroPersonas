@@ -105,12 +105,23 @@
                     </tbody>
                 </table>
                 <div class="alert alert-dismissible alert-primary mt-3" data-num="1">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <button type="button" class="close" data-dismiss="alert" onclick="clickAlertButton();">&times;</button>
                     <h4 class="alert-heading">Atención!</h4>
                     <p class="mb-0">Para ver el código QR de cada persona en un formato más grande, haga click en la imágen en miniatura de la tabla.</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+    
+        function clickAlertButton() {
+		closeAlertButton.forEach(() => {
+			this.addEventListener('click', (e) => {
+				alertDiv[e.target.parentElement.dataset.num].style.display = 'none';
+			});
+		});
+	}
+    </script>
 
 <%- include ('partials/_footer')  %>
