@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		console.log(showTableButton.innerHTML.trim());
 		showTableButton.innerHTML.trim() === 'Ocultar Tabla'
 			? (showTableButton.innerHTML = 'Mostrar Tabla')
-			: (showTableButton.innerHTML = 'Ocultar Taba');
+			: (showTableButton.innerHTML = 'Ocultar Tabla');
 	});
 
 	/* On click toggle show/hide form */
